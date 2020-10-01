@@ -1,13 +1,9 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import HelloWorld from "./HelloWorld";
 
-class App extends Component {
-  state = {
-    tech: "React"
-  };
-  render() {
-    return <HelloWorld tech={this.state.tech} />;
-  }
-}
+const App = () => {
+  const [tech] = useState("React");
+  return <HelloWorld tech={tech} />;
+};
 
 export default App;
